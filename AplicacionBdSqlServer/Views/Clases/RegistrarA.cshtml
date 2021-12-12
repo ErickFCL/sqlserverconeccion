@@ -1,0 +1,17 @@
+﻿
+@{ var alumno = (Alumno)Model; }
+
+<form action="/clases/registrarA" method="post">
+    <label>Por favor Llene sus datos</label>
+
+    <div class="form-group">
+        <label>Nombre </label>
+        <input class="form-control" placeholder="Nombre Estudiante" name="Nombre" />
+    </div>
+    <div class="form-group">
+        <label>Apellido </label>
+        <input class="form-control" placeholder="Apellido Estudiante" name="Apellido" />
+    </div>
+
+    <button class="btn btn-primary">Guardar</button>
+</form>

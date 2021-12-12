@@ -1,0 +1,31 @@
+﻿
+@{ var curso = (Curso)Model; }
+
+<form action="/clases/registrarm" method="post">
+
+    <input type="hidden" name="IdAlumno" value="@ViewBag.IdAlumno" />
+    <div class="form-group">
+        <label>Curso</label>
+        <select name="Nombre" class="form-control">
+            <option value="">-- Selecciona una opcion --</option>
+            @foreach (var item in ViewBag.Cursos)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Profesor</label>
+        <select name="IdProfesor" class="form-control">
+            <option value="">-- Selecciona una opcion --</option>
+            @foreach (var item in ViewBag.Profesores)
+            {
+                <option value="@item.Id">@item.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <button class="btn btn-primary">Guardar</button>
+
+</form>
